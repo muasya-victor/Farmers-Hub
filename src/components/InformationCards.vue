@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-2 w-fit p-2">
+  <div class="flex flex-col gap-0.5 w-fit p-2">
     <h3 class="text-lg font-bold ">
       {{name}}
     </h3>
@@ -23,7 +23,7 @@ export default {
     },
     value: {
       type: String,
-      default: '300'
+      default: '300 '
     },
   }
 }
