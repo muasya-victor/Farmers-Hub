@@ -7,8 +7,16 @@
     </div>
 
     <div class="w-full flex items-center gap-[93px] flex-wrap px-2">
-      <InformationCards v-for="item in 3" :key="item">
+      <InformationCards >
         <UserGroup/>
+      </InformationCards>
+
+      <InformationCards name="Milk Delivered" value="14480 L">
+        <Beaker/>
+      </InformationCards>
+
+      <InformationCards name="Average Daily Deleverage" value="380 L">
+        <Beaker/>
       </InformationCards>
     </div>
 
@@ -28,9 +36,10 @@ import InformationCards from "../components/InformationCards.vue";
 import UserGroup from "../components/icons/UserGroup.vue";
 import LinkItem from "../components/LinkItem.vue";
 import Settings from "../components/icons/Settings.vue";
+import Beaker from "../components/icons/Beaker.vue";
 export default {
   name: "HeaderTwo",
-  components: {Settings, LinkItem, UserGroup, InformationCards, IconContainer, MenuUp}
+  components: {Beaker, Settings, LinkItem, UserGroup, InformationCards, IconContainer, MenuUp}
 }
 </script>
 
