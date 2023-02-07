@@ -1,46 +1,31 @@
 <template>
   <div>
-    <a-table :dataSource="dataSource" :columns="columns" />
+    <a-modal v-model:visible="visible" width="800px" title="Basic Modal" @ok="handleOk" @cancel="handleCancel">
+      <RegisterForm />
+    </a-modal>
   </div>
 </template>
 
 <script>
+import router from "../../router/index.js";
+import RequiredTag from "../RequiredTag.vue";
+import RegisterForm from "../RegisterForm.vue";
+
 export default {
   name: "RegisterFarmer",
+  components: {RegisterForm, RequiredTag},
   data(){
     return {
-      dataSource: [
-        {
-          key: '1',
-          name: 'Mike',
-          age: 32,
-          address: '10 Downing Street',
-        },
-        {
-          key: '2',
-          name: 'John',
-          age: 42,
-          address: '10 Downing Street',
-        },
-      ],
-
-      columns: [
-        {
-          title: 'Name',
-          dataIndex: 'name',
-          key: 'name',
-        },
-        {
-          title: 'Age',
-          dataIndex: 'age',
-          key: 'age',
-        },
-        {
-          title: 'Address',
-          dataIndex: 'address',
-          key: 'address',
-        },
-      ],
+      visible:true
+    }
+  },
+  methods:{
+    handleOk(e){
+      this.visible = true
+      router.go(-1)
+    },
+    handleCancel(){
+      router.go(-1)
     }
   }
 }

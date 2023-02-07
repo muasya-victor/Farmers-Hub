@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router"
 import Dashboard from "../pages/Dashboard.vue";
 import Login from "../pages/Login.vue";
+import RegisterFarmer from "../components/farmers/RegisterFarmer.vue";
+import FarmerTable from "../components/farmers/FarmerTable.vue";
 
 
 let routes = [
@@ -11,7 +13,27 @@ let routes = [
         meta : {
             icon:'',
             role:''
-        }
+        },
+        children: [
+            {
+                path:'',
+                name:'farmers',
+                component:FarmerTable,
+                meta : {
+                    icon:'',
+                    role:''
+                }
+            },
+            {
+                path:'register',
+                name:'register',
+                component:RegisterFarmer,
+                meta : {
+                    icon:'',
+                    role:''
+                }
+            },
+        ]
     },
     {
         path:'/login',
@@ -22,6 +44,7 @@ let routes = [
             role:''
         }
     },
+
 ]
 
 const router = createRouter({

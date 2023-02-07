@@ -20,8 +20,9 @@
       </InformationCards>
     </div>
 
-    <div class="w-full flex items-center gap-[93px] flex-wrap bg-[#367310] py-0.5 px-2">
-      <LinkItem v-for="item in 3" :key="item"/>
+    <div class="w-full flex items-center gap-48 flex-wrap bg-[#367310] py-0.5 px-2">
+      <LinkItem />
+      <LinkItem link="New Record"/>
       <LinkItem link="settings">
         <Settings/>
       </LinkItem>

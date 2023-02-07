@@ -1,12 +1,24 @@
 <template>
-  <div >
+  <div class="flex flex-col gap-1">
+    <div class="flex  items-center justify-end w-full">
+      <a-button type="primary" class="flex items-center" size="middle" @click="routeTo">
+        <template #icon>
+          +
+        </template>
+        Farmer
+      </a-button>
+    </div>
+
     <a-table :dataSource="dataSource" :columns="columns" />
   </div>
 </template>
 
 <script>
+import AddNew from "../icons/AddNew.vue";
+import router from "../../router/index.js";
 export default {
   name: "FarmerTable",
+  components: {AddNew},
   data(){
     return {
       dataSource: [
@@ -41,6 +53,11 @@ export default {
           key: 'address',
         },
       ],
+    }
+  },
+  methods : {
+    routeTo(){
+      router.push({name:'register'})
     }
   }
 }
