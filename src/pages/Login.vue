@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen w-full flex items-center justify-center rounded">
-    <div class="w-10/12 h-[80%] ring-1  flex">
+    <div class="w-10/12 h-[80%] shadow  flex">
       <LoginImageHolder/>
       <LoginForm/>
     </div>

@@ -4,3 +4,8 @@
 .header-lg {
     font-size: 1.5rem;
 }
+
+label {
+    font-weight: bold;
+    display: flex;
+}
