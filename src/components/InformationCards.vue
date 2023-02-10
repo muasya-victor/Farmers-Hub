@@ -1,16 +1,14 @@
 <template>
-  <div class="flex flex-col gap-0.5 w-fit p-2">
-    <h3 class="text-lg font-bold ">
-      {{name}}
-    </h3>
+  <div class="flex items-center h-fit gap-2 w-fit text-[#336E0F] text-lg font-bold">
+    <!--      fit only Icons here-->
+    <slot/>
+    <span class="h-fit font-bold ">
+        {{name}}
+      </span>
 
-    <p class="flex items-center gap-2 w-full text-[#336E0F] font-bold">
-<!--      fit only Icons here-->
-      <slot/>
-
-      {{value}}
-    </p>
+    {{value}}
   </div>
+
 </template>
 
 <script>

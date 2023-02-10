@@ -20,7 +20,7 @@ export default {
     }
   },
   methods:{
-    handleOk(e){
+    handleOk(){
       this.visible = true
       router.go(-1)
     },

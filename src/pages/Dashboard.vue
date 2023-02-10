@@ -3,10 +3,14 @@
     <TopNav></TopNav>
     <HeaderTwo/>
 
+    <h3 class="header">
+<!--      KUMBUKA E COMMERCE FOUNDATIONS CAT-->
+
+    </h3>
     <div class="px-2 mt-4 flex gap-1  justify-between w-full">
       <router-view class="w-11/12"/>
 
-      <div class="h-[inherit] border-l pl-2 w-1/12">
+      <div class="h-[inherit] border-l pl-2 w-1/12 hidden md:block">
         <label class="text-gray-700 ">Google Ads</label>
       </div>
     </div>
